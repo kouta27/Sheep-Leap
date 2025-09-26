@@ -8,7 +8,9 @@ public class NoteSpawner : MonoBehaviour
     public Transform spawnPoint; //ノーツ出現位置
     public Transform hitPoint;
     public GameObject notePrefab;
-    public float travelTime = 2.0f; //出現からヒット位置到達まで時間
+    [Header("出現からヒット位置到達まで時間")]
+    public float travelTime = 2.0f;
+
     public TextAsset noteJson;
 
     public List<NoteData> notes = new List<NoteData>();
