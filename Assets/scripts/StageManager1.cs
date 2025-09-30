@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     public GameObject player;    // プレイヤーキャラ
-    public float musicEndTime = 180f; // 曲が終わる時間（秒）
-    public float moveSpeed = 2f; // プレイヤー移動速度
+    public float musicEndTime; //曲が終わる時間（秒）
+    public float moveSpeed; // プレイヤー移動速度
     private bool stageClear = false;
     private float endTimer = 0f;
 
@@ -30,7 +30,7 @@ public class StageManager : MonoBehaviour
             if (endTimer >= 5f)
             {
                 // 5秒後に次のシーンへ移動
-                SceneManager.LoadScene("Stage2");
+                GameManager.instance.GoToNextStage();
             }
         }
     }
