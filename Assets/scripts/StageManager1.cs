@@ -30,7 +30,7 @@ public class StageManager : MonoBehaviour
             if (endTimer >= 5f)
             {
                 // 5•bŒã‚ÉŸ‚ÌƒV[ƒ“‚ÖˆÚ“®
-                SceneManager.LoadScene("Stage2");
+                GameManager.instance.GoToNextStage();
             }
         }
     }
