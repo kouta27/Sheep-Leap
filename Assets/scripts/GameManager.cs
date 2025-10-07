@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public int[] stageScores = new int[3]; //各ステージのスコア保存
-    public int currentStage = -1;           //今どのステージか
+    public int[] stageScores = new int[4]; //各ステージのスコア保存
+    public int currentStage = 0;           //今どのステージか
     public int maxStage = 3;
 
     void Awake()

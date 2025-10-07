@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ResultUI : MonoBehaviour
@@ -29,6 +30,16 @@ public class ResultUI : MonoBehaviour
             nextButton.SetActive(true);
             rankingButton.SetActive(false);
         }
+    }
+
+    public void OnNextButton()
+    {
+        SceneManager.LoadScene("Stage" + GameManager.instance.currentStage + 1);
+    }
+
+    public void OnRankingButton()
+    {
+        SceneManager.LoadScene("Ranking");
     }
 }
 
