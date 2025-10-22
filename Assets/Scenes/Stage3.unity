@@ -879,7 +879,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 6.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1020,7 +1020,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f4af4485d8d2645a732cbf136c7624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 22
+  smallJumpForce: 16.5
+  bigJumpForce: 21.8
+  holdborder: 0.14
 --- !u!1 &1739838877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1113,7 @@ GameObject:
   - component: {fileID: 1864904429}
   - component: {fileID: 1864904428}
   - component: {fileID: 1864904427}
+  - component: {fileID: 1864904430}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1173,6 +1176,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1864904430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864904426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f8d3b2863033f4ca888f7a870bed0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1709182113}
+  musicEndTime: 2
+  moveSpeed: 6
 --- !u!1 &2134138638
 GameObject:
   m_ObjectHideFlags: 0

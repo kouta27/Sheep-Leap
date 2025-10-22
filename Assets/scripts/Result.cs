@@ -34,7 +34,7 @@ public class ResultUI : MonoBehaviour
 
     public void OnNextButton()
     {
-        SceneManager.LoadScene("Stage" + GameManager.instance.currentStage + 1);
+        SceneManager.LoadScene("Stage" + (GameManager.instance.currentStage + 1));
     }
 
     public void OnRankingButton()

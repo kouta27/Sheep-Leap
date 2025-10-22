@@ -5,7 +5,7 @@ public class TitleManager : MonoBehaviour
 {
     public void OnclickStart()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Stage0");
     }
 
     public void Onclickranking()

@@ -781,7 +781,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 6.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -827,7 +827,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.06842163}
+  m_Offset: {x: 0.205508, y: -0.25267312}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -837,7 +837,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2522154, y: 1.8981566}
+  m_Size: {x: 0.46180105, y: 1.4411266}
   m_EdgeRadius: 0
 --- !u!212 &1709182116
 SpriteRenderer:
@@ -922,9 +922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f4af4485d8d2645a732cbf136c7624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallJumpForce: 12
-  bigJumpForce: 20
-  holdborder: 0.2
+  smallJumpForce: 16.5
+  bigJumpForce: 21.8
+  holdborder: 0.14
 --- !u!1 &1739838877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1017,6 @@ GameObject:
   - component: {fileID: 1864904427}
   - component: {fileID: 1864904430}
   - component: {fileID: 1864904431}
-  - component: {fileID: 1864904432}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1093,7 +1092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1709182113}
-  musicEndTime: 2.89
+  musicEndTime: 999
   moveSpeed: 6
 --- !u!82 &1864904431
 AudioSource:
@@ -1192,21 +1191,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1864904432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864904426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414357d9fc3eea14a97db8601ff86fc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageScores: 000000000000000000000000
-  currentStage: -1
-  maxStage: 3
 --- !u!1 &2134138638
 GameObject:
   m_ObjectHideFlags: 0

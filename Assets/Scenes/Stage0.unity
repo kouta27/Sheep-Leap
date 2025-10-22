@@ -781,7 +781,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 6.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -922,9 +922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f4af4485d8d2645a732cbf136c7624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallJumpForce: 12
-  bigJumpForce: 20
-  holdborder: 0.2
+  smallJumpForce: 16.5
+  bigJumpForce: 21.8
+  holdborder: 0.14
 --- !u!1 &1739838877
 GameObject:
   m_ObjectHideFlags: 0
