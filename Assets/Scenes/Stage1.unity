@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1709182113}
-  musicEndTime: 999
+  musicEndTime: 2
   moveSpeed: 6
 --- !u!82 &1864904431
 AudioSource:

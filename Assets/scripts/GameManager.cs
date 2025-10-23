@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour
 
     public void SaveStageScore(int score)
     {
-        if (currentStage >= 0 && currentStage < stageScores.Length)
+        if (currentStage > 0 && currentStage < stageScores.Length)
         {
-            stageScores[currentStage] = score;
+            stageScores[currentStage - 1] = score;
         }
     }
 
@@ -41,7 +41,14 @@ public class GameManager : MonoBehaviour
     public void GoToNextStage()
     {
         currentStage++;
-        SceneManager.LoadScene("Result");
+        if (currentStage == 0)//stage0‚È‚ç
+        {
+            SceneManager.LoadScene("Stage1");
+        }
+        else
+        {
+            SceneManager.LoadScene("Result");
+        }
     }
 }
 
