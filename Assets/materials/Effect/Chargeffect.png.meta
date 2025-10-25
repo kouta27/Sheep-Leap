@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 39367803855df404190406425c722379
+guid: 9c480b9375ce86a44baf59c2394777ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2562558533287997349
-    second: forest-dot1_0
+      213: -2857994886920435457
+    second: Chargeffect_0
+  - first:
+      213: 276884051324611781
+    second: Chargeffect_1
+  - first:
+      213: -6897261089452468906
+    second: Chargeffect_2
+  - first:
+      213: 7287119827047680806
+    second: Chargeffect_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +49,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -100,23 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: forest-dot1_0
+      name: Chargeffect_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5afe6c4b869009320800000000000000
-      internalID: 2562558533287997349
+      spriteID: ff8893beacc5658d0800000000000000
+      internalID: -2857994886920435457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chargeffect_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ccac23e390b7d300800000000000000
+      internalID: 276884051324611781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chargeffect_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655df0815910840a0800000000000000
+      internalID: -6897261089452468906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chargeffect_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b02e6bfdc012560800000000000000
+      internalID: 7287119827047680806
       vertices: []
       indices: 
       edges: []
@@ -125,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 73bd663233306c749809cdc659138eca
+    spriteID: c8b39534922600f4992c404837f2b513
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      forest-dot1_0: 2562558533287997349
+      Chargeffect_0: -2857994886920435457
+      Chargeffect_1: 276884051324611781
+      Chargeffect_2: -6897261089452468906
+      Chargeffect_3: 7287119827047680806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
