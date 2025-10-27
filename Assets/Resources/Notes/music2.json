@@ -1,0 +1,8 @@
+{
+  "notes": [
+    {"time": 3,"type": 1},
+    {"time": 3.2,"type": 0},
+    {"time": 4.4,"type": 1},
+    {"time": 5,"type": 0}
+  ]
+}
