@@ -732,9 +732,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f4af4485d8d2645a732cbf136c7624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallJumpForce: 16.5
-  bigJumpForce: 21.8
-  holdborder: 0.14
+  laneY:
+  - -1
+  - 1.75
+  - 4.5
 --- !u!1 &1739838877
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,8 +872,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 1642036375}
   hitPoint: {fileID: 1516049782}
   notePrefab: {fileID: 2229333508177532309, guid: d9cfe5ada9bd19143aa1ca978bf30d52, type: 3}
-  travelTime: 2
-  noteJson: {fileID: 4900000, guid: 48e2c027e8e717348bab7043b4f30eac, type: 3}
+  travelTime: 1.5
+  noteJson: {fileID: 4900000, guid: 5028032ed941eb340ac753f453f1c2de, type: 3}
   notes: []
 --- !u!4 &1864904429
 Transform:
