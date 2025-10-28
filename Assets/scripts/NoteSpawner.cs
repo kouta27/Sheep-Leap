@@ -59,9 +59,20 @@ public class NoteSpawner : MonoBehaviour
 
     void Spawn(NoteData data)
     {
-        // レーンによるY座標の切り替え
-        float laneY = spawnPoint.position.y;
-        if (data.type == 1) laneY += 1.6f;
+        // レーンによるy座標の切り替え
+        float laneY = 1.75f;
+        switch (data.type)
+        {
+            case 0: //下段
+                laneY = -1.0f;
+                break;
+            case 1: //中段
+                laneY = 1.75f;
+                break;
+            case 2: //上段
+                laneY = 4.5f;
+                break;
+        }
 
         Vector3 startPos = new Vector3(spawnPoint.position.x, laneY, spawnPoint.position.z);
         GameObject go = Instantiate(notePrefab, startPos, Quaternion.identity);

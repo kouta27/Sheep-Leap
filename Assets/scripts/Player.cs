@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rb;
+    /*Rigidbody2D rb;
     bool isGrounded; //地面にいるかどうか
 
     public float smallJumpForce = 12f; //小ジャンプの力
@@ -53,6 +53,46 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+    }*/
+    public float[] laneY = { -1f, 1.75f, 4.5f }; //３つのy座標
+    private int currentLane = 0; //現在のレーン（0=下、1=中、2=上）
+
+    void Start()
+    {
+        //下から登場
+        Vector3 pos = transform.position;
+        pos.y = laneY[currentLane];
+        transform.position = pos;
+    }
+
+    void Update()
+    {
+        //上移動
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            MoveLane(1);
+        }
+        //下移動
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            MoveLane(-1);
+        }
+    }
+
+    void MoveLane(int direction)
+    {
+        int newLane = currentLane + direction;
+
+        //レーン0or1or2だけにするための制限
+        if (newLane >= 0 && newLane < laneY.Length)
+        {
+            currentLane = newLane;
+
+            //移動
+            Vector3 pos = transform.position;
+            pos.y = laneY[currentLane];
+            transform.position = pos;
         }
     }
 }
