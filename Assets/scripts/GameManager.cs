@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject); //ƒV[ƒ“Ø‚è‘Ö‚¦‚Ä‚àÁ‚¦‚È‚¢
         }
-        else
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour
 
     public void SaveStageScore(int score)
     {
-        if (currentStage > 0 && currentStage < stageScores.Length)
+        if (currentStage >= 0 && currentStage < stageScores.Length)
         {
-            stageScores[currentStage - 1] = score;
+            stageScores[currentStage] = score;
         }
     }
 
@@ -49,6 +49,12 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Result");
         }
+    }
+
+    public void ResetGame()
+    {
+        instance = null;
+        Destroy(gameObject);
     }
 }
 

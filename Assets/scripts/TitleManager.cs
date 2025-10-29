@@ -5,6 +5,9 @@ public class TitleManager : MonoBehaviour
 {
     public void OnclickStart()
     {
+        //«•Û‘¶‚µ‚Ä‚µ‚Ü‚Á‚½‚à‚Ì‚ğÁ‚·—p
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.Save();
         SceneManager.LoadScene("Stage0");
     }
 

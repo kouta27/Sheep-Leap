@@ -8,11 +8,18 @@ public class StageManager : MonoBehaviour
     public float moveSpeed; // プレイヤー移動速度
     private bool stageClear = false;
     private float endTimer = 0f;
+    private float sceneStartTime; //シーン開始時刻
 
+    void Start()
+    {
+        //シーン読み込み時の時間を記録
+        sceneStartTime = Time.time;
+    }
     void Update()
     {
+        float elapsedTime = Time.time - sceneStartTime;
         // 曲が終わったら処理開始
-        if (!stageClear && Time.time >= musicEndTime)
+        if (!stageClear && elapsedTime >= musicEndTime)
         {
             stageClear = true;
             endTimer = 0f;
@@ -27,9 +34,14 @@ public class StageManager : MonoBehaviour
             }
 
             endTimer += Time.deltaTime;
-            if (endTimer >= 5f)
+            if (endTimer >= 4f)
             {
-                // 5秒後に次のシーンへ移動
+                // スコアをGameManagerに保存
+                if (ScoreManager.instance != null && GameManager.instance != null)
+                {
+                    GameManager.instance.SaveStageScore(ScoreManager.instance.score);
+                }
+                // 4秒後に次のシーンへ移動
                 GameManager.instance.GoToNextStage();
             }
         }

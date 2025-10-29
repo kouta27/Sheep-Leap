@@ -42,4 +42,3 @@ public class ResultUI : MonoBehaviour
         SceneManager.LoadScene("Ranking");
     }
 }
-
