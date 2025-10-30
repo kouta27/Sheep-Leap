@@ -9,6 +9,11 @@ public class BackGroundManager : MonoBehaviour
     float scrollAcceleration = 0.1f;
     float scrollTime = 0;
     bool isEnded = false;
+
+    public void Start()
+    {
+        StartScroll(); 
+    }
     public void StartScroll()
     {
         StartCoroutine(Scroll());

@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class ResultUI : MonoBehaviour
 {
-    public Text stageScoreText;
-    public Text totalScoreText; // 最後のステージのみ
+    public TextMeshProUGUI stageScoreText;
+    public TextMeshProUGUI totalScoreText; // 最後のステージのみ
     public GameObject nextButton;
     public GameObject rankingButton;
 

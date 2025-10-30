@@ -51,6 +51,11 @@ public class Note : MonoBehaviour
                 ScoreManager.instance.OnNoteHit(baseScore);
 
             //エフェクトやSEはここで再生！
+            if(EffectManager.Instance != null)
+            {
+                var effectObj = EffectManager.Instance.PlayEffect(EffectType.GetEffect, transform.position, Quaternion.identity);
+                // PooledEffectとしての初期化が必要ならここで行う
+            }
             Destroy(gameObject);
         }
     }

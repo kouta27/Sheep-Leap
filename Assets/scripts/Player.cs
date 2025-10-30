@@ -72,11 +72,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             MoveLane(1);
+            if(EffectManager.Instance != null)
+            {
+                EffectManager.Instance.PlayEffect(EffectType.jumpup, transform.position);
+            }
         }
         //下移動
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             MoveLane(-1);
+            if(EffectManager.Instance != null)
+            {
+                EffectManager.Instance.PlayEffect(EffectType.jumpdown, transform.position);
+            }
         }
     }
 

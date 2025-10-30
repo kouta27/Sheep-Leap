@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -12,8 +12,8 @@ public class ScoreManager : MonoBehaviour
     public int bonusPerCombo = 10;　//コンボ1ごとに加算するボーナス点
 
     [Header("UI参照")]
-    public Text scoreText;
-    public Text comboText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI comboText;
 
     [Header("演出設定")]
     public float comboPopScale = 1.4f;　//コンボ時に拡大する倍率
