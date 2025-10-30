@@ -7,11 +7,19 @@ public class UIAnimatorController : MonoBehaviour
     [SerializeField] IrisOut irisOut;
     public void PushAnimation()
     {
+        if(AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX(SoundId.UI_Click);
+        }
         GetComponent<Animator>().SetTrigger("Push");
     }
 
     public void RankingScene()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySFX(SoundId.UI_Click);
+        }
         TitleManager.Onclickranking();
     }
 

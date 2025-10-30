@@ -907,8 +907,8 @@ MonoBehaviour:
   score: 0
   baseScorePerNote: 100
   bonusPerCombo: 10
-  scoreText: {fileID: 2134138639}
-  comboText: {fileID: 800466607}
+  scoreText: {fileID: 0}
+  comboText: {fileID: 0}
   comboPopScale: 1.4
   popDuration: 0.15
   comboFlashColor: {r: 0.9960785, g: 0.9294118, b: 0, a: 1}
@@ -975,7 +975,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 450b1f6cf79d9dc4faa91faceb69af28, type: 3}
   m_Resource: {fileID: 8300000, guid: 450b1f6cf79d9dc4faa91faceb69af28, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.783
   m_Pitch: 1
   Loop: 0
   Mute: 0

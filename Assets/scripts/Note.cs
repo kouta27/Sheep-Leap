@@ -56,6 +56,10 @@ public class Note : MonoBehaviour
                 var effectObj = EffectManager.Instance.PlayEffect(EffectType.GetEffect, transform.position, Quaternion.identity);
                 // PooledEffect‚Æ‚µ‚Ä‚Ì‰Šú‰»‚ª•K—v‚È‚ç‚±‚±‚Ås‚¤
             }
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(SoundId.Coin_Get);
+            }
             Destroy(gameObject);
         }
     }

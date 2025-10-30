@@ -76,6 +76,10 @@ public class PlayerController : MonoBehaviour
             {
                 EffectManager.Instance.PlayEffect(EffectType.jumpup, transform.position);
             }
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(SoundId.Player_Jump);
+            }
         }
         //下移動
         else if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -84,6 +88,10 @@ public class PlayerController : MonoBehaviour
             if(EffectManager.Instance != null)
             {
                 EffectManager.Instance.PlayEffect(EffectType.jumpdown, transform.position);
+            }
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySFX(SoundId.Player_Jump);
             }
         }
     }
