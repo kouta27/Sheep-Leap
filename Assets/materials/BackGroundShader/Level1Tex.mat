@@ -44,7 +44,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ScrollTime: 0.4375835
+    - _ScrollTime: 1.5209876
     - _Speed: 0.1
     m_Colors:
     - _Tilling: {r: 1, g: 1, b: 0, a: 0}
