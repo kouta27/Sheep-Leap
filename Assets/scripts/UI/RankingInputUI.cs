@@ -43,7 +43,7 @@ public class RankingInputUI : MonoBehaviour, IRankingReceiver
 
         int scoreValue = 0;
 
-        scoreValue = ScoreManager.instance.score; 
+        scoreValue = GameManager.instance.GetTotalScore(); 
 
         // Lock UI and post
         isPosting = true;
