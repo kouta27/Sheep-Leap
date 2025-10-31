@@ -12,6 +12,8 @@ public class RankingManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(TitleManager.totalScoreForRanking);//このTitleManager.totalScoreForRankingが前プレイした人のトータルスコア
+
         LoadRanking();
 
         //今回のトータルスコアを取得
@@ -58,7 +60,6 @@ public class RankingManager : MonoBehaviour
     public void OnClickTitle()
     {
         if (GameManager.instance != null)
-            GameManager.instance.ResetGame();
         SceneManager.LoadScene("Title");
     }
 }

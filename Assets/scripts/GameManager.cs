@@ -41,17 +41,17 @@ public class GameManager : MonoBehaviour
     public void GoToNextStage()
     {
         currentStage++;
-        if (currentStage == 0)//stage0‚È‚ç
-        {
-            SceneManager.LoadScene("Stage1");
-        }
-        else
+        if (currentStage == 3)//stage3‚È‚çResult‚Ö
         {
             SceneManager.LoadScene("Result");
         }
+        else
+        {
+            SceneManager.LoadScene("Stage" + (GameManager.instance.currentStage+1));
+        }
     }
 
-    public void ResetGame()
+    public void ResetGame()//‚±‚±‚Å•Ï”‚È‚Ç‚ğƒŠƒZƒbƒg
     {
         instance = null;
         Destroy(gameObject);

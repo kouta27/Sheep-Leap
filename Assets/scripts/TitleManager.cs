@@ -5,6 +5,8 @@ public class TitleManager : MonoBehaviour
 {
     [SerializeField]
     private IrisOut irisOut;
+    static public float totalScoreForRanking;
+
     public void OnclickStart()
     {
         //«•Û‘¶‚µ‚Ä‚µ‚Ü‚Á‚½‚à‚Ì‚ğÁ‚·—p

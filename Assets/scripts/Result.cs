@@ -5,8 +5,7 @@ using TMPro;
 public class ResultUI : MonoBehaviour
 {
     public TextMeshProUGUI stageScoreText;
-    public TextMeshProUGUI totalScoreText; // 最後のステージのみ
-    public GameObject nextButton;
+    public TextMeshProUGUI totalScoreText;
     public GameObject rankingButton;
 
     void Start()
@@ -20,25 +19,14 @@ public class ResultUI : MonoBehaviour
         {
             int total = GameManager.instance.GetTotalScore();
             totalScoreText.text = "Total Score: " + total;
-
-            nextButton.SetActive(false);
-            rankingButton.SetActive(true);
-        }
-        else
-        {
-            totalScoreText.text = "";
-            nextButton.SetActive(true);
-            rankingButton.SetActive(false);
+            TitleManager.totalScoreForRanking = total;//ResetGame()が行われてもトータルスコアは残る
         }
     }
 
-    public void OnNextButton()
-    {
-        SceneManager.LoadScene("Stage" + (GameManager.instance.currentStage + 1));
-    }
 
-    public void OnRankingButton()
+    public void OnTitleButton()
     {
-        SceneManager.LoadScene("Ranking");
+        GameManager.instance.ResetGame();
+        SceneManager.LoadScene("Title");
     }
 }
