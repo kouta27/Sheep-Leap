@@ -57,7 +57,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ScrollTime: 4.45
+    - _ScrollTime: 6.652592
     m_Colors:
     - _Tilling: {r: 0.5, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
