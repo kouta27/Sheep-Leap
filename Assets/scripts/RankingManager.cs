@@ -17,7 +17,7 @@ public class RankingManager : MonoBehaviour
         LoadRanking();
 
         //今回のトータルスコアを取得
-        int latestScore = GameManager.instance.GetTotalScore();
+        int latestScore = ScoreManager.instance != null ? ScoreManager.instance.score : 0;
 
         //ランキングに追加してソート
         scores.Add(latestScore);
