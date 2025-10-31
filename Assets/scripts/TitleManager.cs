@@ -13,6 +13,12 @@ public class TitleManager : MonoBehaviour
         //PlayerPrefs.DeleteAll();
         //PlayerPrefs.Save();
         SceneManager.LoadScene("Stage0");
+        if (irisOut == null)
+        {
+            //ゲームマネージャーのオブジェクトについているirisOutを探す
+            GameObject gamemanager = GameManager.instance.gameObject;
+            irisOut = gamemanager.GetComponent<IrisOut>();
+        }
         irisOut.ClearIrisOut();
     }
 
@@ -23,5 +29,10 @@ public class TitleManager : MonoBehaviour
     public void OnclickQuit()
     {
         Application.Quit();
+    }
+
+    public void OnclickTitle()
+    {
+        SceneManager.LoadScene("Title");
     }
 }

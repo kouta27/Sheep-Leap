@@ -5,6 +5,19 @@ public class UIAnimatorController : MonoBehaviour
 {
     [SerializeField] private TitleManager TitleManager;
     [SerializeField] IrisOut irisOut;
+    private void Start()
+    {
+        if (TitleManager == null)
+        {
+            TitleManager = FindObjectOfType<TitleManager>();
+        }
+        if (irisOut == null)
+        {
+            //ゲームマネージャーのオブジェクトについているirisOutを探す
+            GameObject gamemanager = GameManager.instance.gameObject;
+            irisOut = gamemanager.GetComponent<IrisOut>();
+        }
+    }
     public void PushAnimation()
     {
         if(AudioManager.Instance != null)

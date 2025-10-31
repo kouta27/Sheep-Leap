@@ -31,7 +31,10 @@ public class PlayerController : MonoBehaviour
         {
             MoveLane(1);
             if (EffectManager.Instance != null)
-                EffectManager.Instance.PlayEffect(EffectType.jumpup, transform.position);
+            {
+                Invoke(nameof(PlayEffect), 0.1f);
+                isUp = true;
+            }
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlaySFX(SoundId.Player_Jump);
         }
@@ -39,14 +42,26 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             MoveLane(-1);
+            //0.1f秒遅延してエフェクトを再生
             if (EffectManager.Instance != null)
-                EffectManager.Instance.PlayEffect(EffectType.jumpdown, transform.position);
+            {
+                Invoke(nameof(PlayEffect), 0.1f);
+                isUp = false;
+            }
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlaySFX(SoundId.Player_Jump);
         }
 
         //浮遊アニメーション
         ApplyFloating();
+    }
+    private bool isUp;
+    private void PlayEffect()
+    {
+        if(isUp)
+            EffectManager.Instance.PlayEffect(EffectType.jumpup, transform.position);
+        else 
+            EffectManager.Instance.PlayEffect(EffectType.jumpdown, transform.position);
     }
 
     void MoveLane(int direction)
