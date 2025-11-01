@@ -24,6 +24,7 @@ public class TitleManager : MonoBehaviour
 
     public void Onclickranking()
     {
+        GameManager.instance.ResetGame();
         SceneManager.LoadScene("Ranking");
     }
     public void OnclickQuit()

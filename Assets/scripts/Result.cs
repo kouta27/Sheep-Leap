@@ -26,7 +26,6 @@ public class ResultUI : MonoBehaviour
 
     public void OnTitleButton()
     {
-        GameManager.instance.ResetGame();
         SceneManager.LoadScene("Title");
     }
 }
